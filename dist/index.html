@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Codebender AI Starter Project" />
+  <link rel="icon" href="./favicon.png" />
+  <title>Codebender AI Starter Project - JS Edition</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="navbar">
+    <img id="logo" src="path_to_logo_here.png" alt="SuperViral.ai logo" width="200">
+    <input id="api-key" type="password" placeholder="Enter API key" />
+  </div>
+  <div class="App">
+    <div class="container">
+      <h1>This is an interface to talk to<br/><span class="color-primary">the Last Codebender</span></h1>
+      <p>Ask him anything you want. Just don't forget to enter your API key on the top right.</h1>
+      <form id="mainForm">
+        <input id="input-field" placeholder="Say anything" />
+        <button id="mainButton">
+          <span id="spinner" style="display: none;">Loading...</span>
+          <span id="arrow">Send</span>
+        </button>
+      </form>
+      <div id="response" class="response">
+        <p id="result"></p>
+      </div>
+    </div>
+  </div>
+  <script src="main.js"></script>
+</body>
+
+</html>

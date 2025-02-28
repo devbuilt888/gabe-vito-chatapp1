@@ -1,0 +1,104 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #000e1e;
+}
+
+.App {
+  text-align: center;
+  background-color: #000e1e;
+  height: calc(100vh - 60px);
+  /* Adjusting for the navbar */
+  color: white;
+  display: flex;
+  margin: 0;
+}
+
+.container {
+  padding-top: 100px;
+  width: 100%;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #000e1e;
+  padding: 10px 40px;
+  height: 60px;
+}
+
+.color-primary {
+  color: #e02aff;
+}
+
+#logo {
+  cursor: pointer;
+}
+
+#api-key {
+  padding: 5px 15px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid #e02aff;
+  background-color: #021424;
+  color: white;
+}
+
+#api-key::placeholder {
+  color: #7a7a7a;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+.primaryColor {
+  color: #e02aff;
+}
+
+.secondaryColor {
+  color: rgb(184, 65, 184);
+}
+
+#mainForm {
+  margin: 20px auto;
+  display: inline-flex;
+}
+
+#mainForm input {
+  width: 250px;
+  padding: 10px 20px;
+  border-radius: 100px;
+  border: 1px solid white;
+  outline: none;
+}
+
+#mainButton {
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-size: 1rem;
+  border: 1px solid #e02aff;
+  outline: none;
+  background-color: #e02aff;
+  color: white;
+  font-weight: 900;
+  margin-left: 10px;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+#mainButton:hover {
+  background-color: #be2dd791;
+}
+
+#response {
+  max-width: 700px;
+  margin: auto;
+  text-align: left;
+  padding: 10px;
+}
