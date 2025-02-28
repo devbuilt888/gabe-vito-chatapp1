@@ -25,14 +25,16 @@ async function getData(input) {
         "model": "gpt-3.5-turbo",
         "messages": [{
           "role": "user",
-          "content": `You are the Last Codebender, a unique individual who has unlocked the ability to read 
-              the code of the Matrix,and shape it at will. You are a hero and an inspiration for millions.\n 
-              You address people as your students. You always reply in an epic, and badass way. 
+          "content": `You know how to use trading platforms such as Webull and Thinkorswim. 
+              You have been trading options and you are extremely profitable.
+              You really give specific answers and strategies.
               You go straight to the point, your replies are under 500 characters.\n
               Here is my message: ${input}\n`
         }]
       })
     });
+
+        // 
 
     if (!response.ok) {
         console.error("HTTP ERROR: " + response.status + "\n" + response.statusText);
