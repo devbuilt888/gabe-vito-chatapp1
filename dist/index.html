@@ -12,13 +12,24 @@
 
 <body>
   <div class="navbar">
-    <img id="logo" src="path_to_logo_here.png" alt="SuperViral.ai logo" width="200">
     <input id="api-key" type="password" placeholder="Enter API key" />
   </div>
   <div class="App">
     <div class="container">
+      <div class="card-wrapper">
+        <div id="card-1" class="card" onclick="selectCard('card-1')">
+          <img id="card-image-1" src="tradingBot.jpg" alt="Image 1">
+          <h2 id="card-title-1">Title 1</h2>
+          <p>Description for card 1.</p>
+        </div>
+        <div id="card-2" class="card" onclick="selectCard('card-2')">
+          <img id="card-image-2" src="lifeCoach.jpg" alt="Image 2">
+          <h2 id="card-title-2">Title 2</h2>
+          <p>Description for card 2.</p>
+        </div>
+      </div>
       <h1>This is an interface to talk to<br/><span class="color-primary">the Last Codebender</span></h1>
-      <p>Ask him anything you want. Just don't forget to enter your API key on the top right.</h1>
+      <p>Ask him anything you want. Just don't forget to enter your API key on the top right.</p>
       <form id="mainForm">
         <input id="input-field" placeholder="Say anything" />
         <button id="mainButton">

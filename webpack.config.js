@@ -1,10 +1,11 @@
 const path = require('path');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/index.js', // No change needed here
   output: {
     filename: 'main.js',
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'dist'), // No change needed here
+    publicPath: '/', // Add this line to ensure the correct path for assets
   },
   module: {
     rules: [
