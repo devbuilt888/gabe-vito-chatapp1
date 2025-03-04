@@ -14,12 +14,13 @@ let mode = 'trading'; // Default mode
 
 async function getData(input) {
   let messageContent;
-
+ // Include text formating code in your answer using markdown syntax, like this: **bold text** and scape sequence for bold text and new line like this: \\n
   if (mode === 'trading') {
     messageContent = `You know how to use trading platforms such as Webull and Thinkorswim. 
         You have been trading options and you are extremely profitable.
         You really give specific answers and strategies.
-        You go straight to the point, your replies are under 500 characters.\n
+       Send your response as html code so it's formatted correctly, but don't include the html, body and headers tags, instead just the inner tags.
+       And provide styling in the html tags, so that the important terms are in bold.
         If you get asked anything unrelated to trading, you can say "I'm sorry, I can't help with that. I'm a trading bot."
         Here is my message: ${input}\n`;
   } else {
@@ -57,7 +58,8 @@ async function getData(input) {
       result = data.choices[0].message.content;
       loading = false;
       error = "";
-      resultP.textContent = result;
+      // resultP.textContent = result;
+      document.getElementById('response-div').innerHTML = result;
       spinner.style.display = 'none';
       arrow.style.display = 'inline';
     }

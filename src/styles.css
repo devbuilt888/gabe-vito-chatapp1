@@ -92,7 +92,7 @@ body {
 }
 
 .selected-card {
-  background: linear-gradient(45deg, #aa2aff, #021424)
+  background: linear-gradient(45deg, #aa2aff, #021424);
 }
 
 .navbar {
@@ -175,4 +175,12 @@ h1 {
   text-align: left;
   padding: 10px;
   color: white;
+}
+
+#response-div {
+  color: white;
+  font-size: 20px;
+  max-width: 900px;
+  margin: auto;
+  padding-bottom:200px;
 }
