@@ -1,11 +1,49 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #000e1e;
+  width: 100%;
+  height: 100vh;
+  background-image: radial-gradient(
+      circle at 20px 20px,
+      #fff 1px,
+      transparent 1px
+    ),
+    radial-gradient(circle at 60px 60px, #fff 1px, transparent 1px),
+    radial-gradient(circle at 90px 90px, #fff 1px, transparent 1px),
+    radial-gradient(circle at 40px 80px, #fff 1px, transparent 1px),
+    radial-gradient(circle at 120px 30px, #fff 1px, transparent 1px),
+    radial-gradient(circle at 200px 150px, #fff 1px, transparent 1px),
+    radial-gradient(circle at 250px 180px, #fff 1px, transparent 1px),
+    radial-gradient(circle at 180px 220px, #fff 1px, transparent 1px),
+    radial-gradient(circle at 320px 90px, #fff 1px, transparent 1px),
+    radial-gradient(circle at 400px 200px, #fff 1px, transparent 1px),
+    radial-gradient(circle at 120px 300px, #fff 2px, transparent 2px),
+    radial-gradient(circle at 60px 120px, #fff 2px, transparent 2px),
+    radial-gradient(circle at 340px 250px, #fff 2px, transparent 2px),
+    radial-gradient(circle at 80px 40px, #fff 2px, transparent 2px),
+    radial-gradient(circle at 220px 320px, #fff 2px, transparent 2px),
+    radial-gradient(circle at 280px 160px, #fff 2px, transparent 2px),
+    radial-gradient(circle at 370px 400px, #fff 2px, transparent 2px),
+    radial-gradient(circle at 420px 70px, #fff 2px, transparent 2px),
+    radial-gradient(circle at 150px 370px, #fff 2px, transparent 2px),
+    radial-gradient(circle at 60px 280px, #fff 2px, transparent 2px),
+    radial-gradient(circle at 480px 130px, #fff 3px, transparent 3px),
+    radial-gradient(circle at 390px 290px, #fff 3px, transparent 3px),
+    radial-gradient(circle at 200px 380px, #fff 3px, transparent 3px),
+    radial-gradient(circle at 310px 120px, #fff 3px, transparent 3px),
+    radial-gradient(circle at 450px 220px, #fff 3px, transparent 3px),
+    radial-gradient(circle at 70px 340px, #fff 3px, transparent 3px),
+    radial-gradient(circle at 320px 400px, #fff 3px, transparent 3px),
+    radial-gradient(circle at 180px 120px, #fff 3px, transparent 3px),
+    radial-gradient(circle at 420px 350px, #fff 3px, transparent 3px),
+    radial-gradient(circle at 210px 40px, #fff 3px, transparent 3px);
+  background-size: 800px 600px; /* Adjust size as needed */
+  background-repeat: repeat;
 }
 
 .App {
@@ -27,14 +65,14 @@ body {
 
 .card-wrapper {
   display: flex;
-    justify-content: center;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 10px; /* Reduced gap between cards */
 }
 
 .card {
   background-color: #021424;
-  border: 1px solid #e02aff;
+  border: 1px solid #2abfff;
   border-radius: 10px;
   padding: 20px;
   margin: 10px; /* Reduced margin */
@@ -50,7 +88,7 @@ body {
 }
 
 .card h2 {
-  color: #e02aff;
+  color: #2abfff;
 }
 
 .selected-card {
@@ -67,7 +105,7 @@ body {
 }
 
 .color-primary {
-  color: #e02aff;
+  color: #2abfff;
 }
 
 #logo {
@@ -78,7 +116,7 @@ body {
   padding: 5px 15px;
   border-radius: 5px;
   outline: none;
-  border: 1px solid #e02aff;
+  border: 1px solid #2abfff;
   background-color: #021424;
   color: white;
 }
@@ -92,7 +130,7 @@ h1 {
 }
 
 .primaryColor {
-  color: #e02aff;
+  color: #2a9fff;
 }
 
 .secondaryColor {
@@ -101,7 +139,8 @@ h1 {
 
 #mainForm {
   margin: 20px auto;
-  display: inline-flex;
+  display: flex;
+  justify-content: center;
 }
 
 #mainForm input {
@@ -118,7 +157,7 @@ h1 {
   font-size: 1rem;
   border: 1px solid #e02aff;
   outline: none;
-  background-color: #e02aff;
+  background-color: #2abfff;
   color: white;
   font-weight: 900;
   margin-left: 10px;
@@ -135,5 +174,5 @@ h1 {
   margin: auto;
   text-align: left;
   padding: 10px;
-  color:white;
+  color: white;
 }
