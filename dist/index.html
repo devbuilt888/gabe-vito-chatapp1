@@ -1,48 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Codebender AI Starter Project" />
-  <link rel="icon" href="./favicon.png" />
-  <title>Codebender AI Starter Project - JS Edition</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-
-<body>
-  <div class="navbar">
-    <input id="api-key" type="password" placeholder="Enter API key" />
-  </div>
-  <div class="App">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Codebender AI Chat</title>
+    <script defer="defer" src="/main.js"></script>
+    <link href="/styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="navbar">
+      <input id="api-key" placeholder="Enter API Key" />
+    </div>
     <div class="container">
       <div class="card-wrapper">
-        <div id="card-1" class="card" onclick="selectCard('card-1')">
-          <img id="card-image-1" src="tradingBot.jpg" alt="Image 1">
-          <h2 id="card-title-1">Title 1</h2>
-          <p>Description for card 1.</p>
+        <div id="card-1" class="card">
+          <img src="tradingBot.jpg" alt="Trading Bot" />
+          <h2>Trading Bot</h2>
+          <p>Get trading advice and strategies.</p>
         </div>
-        <div id="card-2" class="card" onclick="selectCard('card-2')">
-          <img id="card-image-2" src="lifeCoach.jpg" alt="Image 2">
-          <h2 id="card-title-2">Title 2</h2>
-          <p>Description for card 2.</p>
+        <div id="card-2" class="card">
+          <img src="lifeCoachBot.jpg" alt="Personal improvement Bot" />
+          <h2>Personal Improvement Bot</h2>
+          <p>Get advice on productivity and work-life balance.</p>
         </div>
       </div>
-      <h1>This is an interface to talk to<br/><span class="color-primary">the Last Codebender</span></h1>
-      <p>Ask him anything you want. Just don't forget to enter your API key on the top right.</p>
       <form id="mainForm">
-        <input id="input-field" placeholder="Say anything" />
-        <button id="mainButton">
-          <span id="spinner" style="display: none;">Loading...</span>
-          <span id="arrow">Send</span>
-        </button>
+        <input id="input-field" placeholder="Type your message here" />
+        <button id="mainButton" type="submit">Send</button>
       </form>
-      <div id="response" class="response">
-        <p id="result"></p>
-      </div>
+      <div id="spinner" style="display: none">Loading...</div>
+      <div id="arrow" style="display: none">&#x2192;</div>
+      <p id="response"></p>
     </div>
-  </div>
-  <script src="main.js"></script>
-</body>
-
+  </body>
 </html>

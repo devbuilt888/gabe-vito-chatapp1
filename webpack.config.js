@@ -1,11 +1,13 @@
 const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
-  entry: './src/index.js', // No change needed here
+  entry: './src/index.js',
   output: {
     filename: 'main.js',
-    path: path.resolve(__dirname, 'dist'), // No change needed here
-    publicPath: '/', // Add this line to ensure the correct path for assets
+    path: path.resolve(__dirname, 'dist'),
+    publicPath: '/', // Ensure the correct path for assets
   },
   module: {
     rules: [
@@ -21,7 +23,7 @@ module.exports = {
       },
       {
         test: /\.css$/i,
-        use: ['style-loader', 'css-loader'],
+        use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
@@ -29,6 +31,15 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: 'styles.css',
+    }),
+    new HtmlWebpackPlugin({
+      template: './dist/index.html', // Path to your existing HTML file
+      filename: 'index.html',
+    }),
+  ],
   devServer: {
     static: {
       directory: path.join(__dirname, 'dist'),

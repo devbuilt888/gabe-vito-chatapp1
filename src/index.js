@@ -1,13 +1,11 @@
 import './styles.css';
-import logo from './assets/logo.png';
 
 const inputField = document.getElementById('input-field');
 const apiKeyInput = document.getElementById('api-key'); // Select the API key input field
 const form = document.getElementById('mainForm');
 const spinner = document.getElementById('spinner');
 const arrow = document.getElementById('arrow');
-const resultP = document.getElementById('result');
-document.getElementById('logo').src = logo;
+const resultP = document.getElementById('response');
 
 let error = "";
 let result = "";
