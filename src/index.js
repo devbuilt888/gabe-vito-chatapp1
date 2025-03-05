@@ -20,7 +20,7 @@ async function getData(input) {
         You have been trading options and you are extremely profitable.
         You really give specific answers and strategies.
        Send your response as html code so it's formatted correctly, but don't include the html, body and headers tags, instead just the inner tags.
-       And provide styling in the html tags, so that the important terms are in bold.
+       And provide styling in the html tags, so that the important terms or words, are in bold. And the titles are bold, same as the headings of an element. But most of the text shouldn't be bold.
         If you get asked anything unrelated to trading, you can say "I'm sorry, I can't help with that. I'm a trading bot."
         Here is my message: ${input}\n`;
   } else {
