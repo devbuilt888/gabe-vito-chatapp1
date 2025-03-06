@@ -7,6 +7,12 @@ const spinner = document.getElementById('spinner');
 const arrow = document.getElementById('arrow');
 const resultP = document.getElementById('response');
 
+const dropdown = document.getElementById("myDropdown");
+const addBtn = document.getElementById("addBtn");
+const modal = document.getElementById("modal");
+const formModal = document.getElementById("modalForm");
+const closeBtn = document.getElementsByClassName("close")[0];
+
 let error = "";
 let result = "";
 let loading = false;
@@ -14,7 +20,7 @@ let mode = 'trading'; // Default mode
 
 async function getData(input) {
   let messageContent;
- // Include text formating code in your answer using markdown syntax, like this: **bold text** and scape sequence for bold text and new line like this: \\n
+  // Include text formating code in your answer using markdown syntax, like this: **bold text** and scape sequence for bold text and new line like this: \\n
   if (mode === 'trading') {
     messageContent = `You know how to use trading platforms such as Webull and Thinkorswim. 
         You have been trading options and you are extremely profitable.
@@ -71,7 +77,7 @@ async function getData(input) {
   }
 }
 
-form.onsubmit = function(event) {
+form.onsubmit = function (event) {
   event.preventDefault();
   loading = true;
   spinner.style.display = 'inline';
@@ -102,10 +108,70 @@ function selectCard(cardId) {
 }
 
 // Add click event listeners to cards
-document.getElementById('card-1').onclick = function() {
+document.getElementById('card-1').onclick = function () {
   selectCard('card-1');
 }
 
-document.getElementById('card-2').onclick = function() {
+document.getElementById('card-2').onclick = function () {
   selectCard('card-2');
 }
+
+function populateDropdown() {
+  dropdown.innerHTML = ""; // Clear existing options
+  for (let i = 0; i < localStorage.length; i++) {
+    const key = localStorage.key(i);
+    const item = JSON.parse(localStorage.getItem(key));
+    const option = document.createElement("option");
+    option.value = key;
+    option.textContent = item.owner;
+    dropdown.appendChild(option);
+  }
+  updateDropdownSelection();
+}
+
+function updateDropdownSelection() {
+  if (dropdown.value) {
+    const selectedItem = JSON.parse(localStorage.getItem(dropdown.value));
+    const selectedOwner = selectedItem.owner;
+    const selectedOption = dropdown.querySelector(`option[value="${dropdown.value}"]`);
+    if (selectedOption) {
+      selectedOption.textContent = selectedOwner;
+    }
+  }
+}
+
+addBtn.onclick = function () {
+  modal.style.display = "block";
+};
+
+closeBtn.onclick = function () {
+  modal.style.display = "none";
+};
+
+window.onclick = function (event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+};
+
+formModal.onsubmit = function (event) {
+  event.preventDefault();
+  const owner = document.getElementById("owner").value;
+  const apiKey = document.getElementById("apiKey").value;
+
+  if (owner.trim() === "" || apiKey.trim() === "") {
+    alert("Owner and API Key cannot be blank.");
+    return;
+  }
+
+  localStorage.setItem(owner, apiKey);
+  populateDropdown();
+  modal.style.display = "none";
+  form.reset();
+};
+
+dropdown.onchange = function () {
+  updateDropdownSelection();
+};
+
+populateDropdown(); // Initial population
