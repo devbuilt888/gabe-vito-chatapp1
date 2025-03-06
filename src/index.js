@@ -1,7 +1,6 @@
 import './styles.css';
 
 const inputField = document.getElementById('input-field');
-const apiKeyInput = document.getElementById('api-key'); // Select the API key input field
 const form = document.getElementById('mainForm');
 const spinner = document.getElementById('spinner');
 const arrow = document.getElementById('arrow');
@@ -10,7 +9,7 @@ const resultP = document.getElementById('response');
 const dropdown = document.getElementById("myDropdown");
 const addBtn = document.getElementById("addBtn");
 const modal = document.getElementById("modal");
-const formModal = document.getElementById("modalForm");
+const formModal = document.getElementById("formModal");
 const closeBtn = document.getElementsByClassName("close")[0];
 
 let error = "";
@@ -43,7 +42,7 @@ async function getData(input) {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + apiKeyInput.value // Use the value from the API key input field
+        'Authorization': 'Bearer ' + dropdown.options[dropdown.selectedIndex].value // Use the value from the API key input field
       },
       body: JSON.stringify({
         "model": "gpt-3.5-turbo",
@@ -82,6 +81,9 @@ form.onsubmit = function (event) {
   loading = true;
   spinner.style.display = 'inline';
   arrow.style.display = 'none';
+  
+  // let selectedOption = dropdown.options[dropdown.selectedIndex].value;
+  // alert(selectedOption)
   getData(inputField.value);
 }
 
@@ -122,20 +124,17 @@ function populateDropdown() {
     const key = localStorage.key(i);
     const item = JSON.parse(localStorage.getItem(key));
     const option = document.createElement("option");
-    option.value = key;
-    option.textContent = item.owner;
+    option.value = item;
+    option.textContent = key;
     dropdown.appendChild(option);
   }
-  updateDropdownSelection();
+  dropdown.selectedIndex = 0;
 }
 
-function updateDropdownSelection() {
-  if (dropdown.value) {
-    const selectedItem = JSON.parse(localStorage.getItem(dropdown.value));
-    const selectedOwner = selectedItem.owner;
-    const selectedOption = dropdown.querySelector(`option[value="${dropdown.value}"]`);
-    if (selectedOption) {
-      selectedOption.textContent = selectedOwner;
+function getDropdownIndexByText(dropdown, searchText) {
+  for (let i = 0; i < dropdown.options.length; i++) {
+    if (dropdown.options[i].text === searchText) {
+      return i; // Return the index if the text matches
     }
   }
 }
@@ -164,14 +163,17 @@ formModal.onsubmit = function (event) {
     return;
   }
 
-  localStorage.setItem(owner, apiKey);
-  populateDropdown();
+  localStorage.setItem(owner, JSON.stringify(apiKey));
   modal.style.display = "none";
-  form.reset();
-};
-
-dropdown.onchange = function () {
-  updateDropdownSelection();
+  formModal.reset();
+  
+  if (localStorage.getItem(owner) == null) {
+    populateDropdown();
+    dropdown.selectedIndex = dropdown.length - 1;
+  } else {
+    populateDropdown();
+    dropdown.selectedIndex = getDropdownIndexByText(dropdown, owner);
+  }
 };
 
 populateDropdown(); // Initial population
