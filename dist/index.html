@@ -10,7 +10,21 @@
   </head>
   <body>
     <div class="navbar">
-      <input id="api-key" type="password" placeholder="Enter API Key" />
+      <!-- <input id="api-key" type="password" placeholder="Enter API Key" /> -->
+      <select id="myDropdown"></select>
+      <button id="addBtn">Add API Key</button>
+    </div>
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <form id="formModal">
+          <label for="owner">Owner:</label><br>
+          <input type="text" id="owner" name="owner"><br><br>
+          <label for="apiKey">API Key:</label><br>
+          <input type="text" id="apiKey" name="apiKey"><br><br>
+          <button type="submit">Submit</button>
+        </form>
+      </div>
     </div>
     <div class="container">
       <div class="card-wrapper">
