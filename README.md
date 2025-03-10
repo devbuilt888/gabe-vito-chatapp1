@@ -1,6 +1,10 @@
 # Trading Healthy webapp - JS
 
-The world of trading options is very dificult to traverse as a beginner, so use OpenAI to get general advice on how to improve yourself as a better trader, but also chat with the personal development bot, to stay healthy and maximize your productivity while trading. Each bot only answers about their expertise.
+The world of trading options is very dificult to traverse as a beginner, 
+
+So why not use OpenAI to get general advice on how to improve yourself as a better trader, and also chat with the personal development bot, to stay healthy and maximize your productivity while trading. 
+
+Each bot only answers about their expertise.
 It utilizes the OpenAI gpt-3.5-turbo model for chat completion.
 
 PS: You need to enter your API key in the top right to use the app, click add api key, then name it whatever you want and save it. You can find your key [here](https://platform.openai.com/api-keys) after you create an account on https://platform.openai.com.
