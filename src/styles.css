@@ -59,7 +59,6 @@ body {
 }
 
 .container {
-  padding-top: 100px;
   width: 100%;
 }
 
@@ -249,4 +248,17 @@ h1 {
   color: black;
   text-decoration: none;
   cursor: pointer;
+}
+
+.title-wrapper{
+  background: #0000005e;
+  color: #2abfff;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+  border-radius: 5%;
+}
+
+.main-title{
+  color:aliceblue;
 }

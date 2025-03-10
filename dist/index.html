@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Codebender AI Chat</title>
+    <title>Trading healthy webapp</title>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <script defer="defer" src="/main.js"></script>
     <link href="/styles.css" rel="stylesheet" />
@@ -18,25 +18,31 @@
       <div class="modal-content">
         <span class="close">&times;</span>
         <form id="formModal">
-          <label for="owner">Owner:</label><br>
-          <input type="text" id="owner" name="owner"><br><br>
-          <label for="apiKey">API Key:</label><br>
-          <input type="text" id="apiKey" name="apiKey"><br><br>
+          <label for="owner">Owner:</label><br />
+          <input type="text" id="owner" name="owner" /><br /><br />
+          <label for="apiKey">API Key:</label><br />
+          <input type="password" id="apiKey" name="apiKey" /><br /><br />
           <button type="submit">Submit</button>
         </form>
       </div>
     </div>
     <div class="container">
+      <div class="title-wrapper">
+        <h1 class="main-title">Trading healthy</h1>
+        <h2>
+          Get general info on how to trade options, but also stay healthy and productive while trading
+        </h2>
+      </div>
       <div class="card-wrapper">
         <div id="card-1" class="card selected-card">
           <img src="tradingBot.jpg" alt="Trading Bot" />
           <h2>Trading Bot</h2>
-          <p>Get trading advice and strategies.</p>
+          <p>Get trading advice and strategies for trading options from an AI bot</p>
         </div>
         <div id="card-2" class="card">
           <img src="lifeCoachBot.jpg" alt="Personal improvement Bot" />
           <h2>Personal Improvement Bot</h2>
-          <p>Get advice on productivity and work-life balance.</p>
+          <p>Get advice on productivity and work-life balance to stay healthy while trading options</p>
         </div>
       </div>
       <form id="mainForm">

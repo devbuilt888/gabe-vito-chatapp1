@@ -1,13 +1,13 @@
 {
-  "name": "codebender-ai-start-js",
+  "name": "trading-healthy-ai-webapp-js",
   "version": "1.0.0",
-  "description": "Codebender AI Starter Project - JS Edition",
+  "description": "Based on the code for the Codebender AI Starter Project - JS Edition by Zaurbek Stark",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --mode development",
     "build": "webpack --mode production"
   },
-  "author": "Zaurbek Stark",
+  "author": "Zaurbek Stark, Juan and Gabe",
   "license": "MIT",
   "private": true,
   "devDependencies": {
