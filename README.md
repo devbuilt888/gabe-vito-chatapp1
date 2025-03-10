@@ -1,6 +1,6 @@
-# Trading Healthy webapp - JS
+# Trading Healthy webapp - JS 📈💪
 
-The world of trading options is very dificult to traverse as a beginner, 
+The world of trading options is very difficult to traverse as a beginner, 
 
 So why not use OpenAI to get general advice on how to improve yourself as a better trader, and also chat with the personal development bot, to stay healthy and maximize your productivity while trading. 
 
@@ -11,7 +11,7 @@ PS: You need to enter your API key in the top right to use the app, click add ap
 
 <img src="app-demo-gif.gif" alt="app homepage" width=600>
 
-## How to run the app on your local computer
+## How to run the app on your local computer 🖥️
 
 1. Clone the git repo or download as zip.
 2. Open the app folder in your favorite IDE.
